@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dhruvang Weds Vidhi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:site_name" content="Dhruvang Weds Vidhi">
+  <meta property="og:title" content="Dhruvang Weds Vidhi" />
+  <meta property="og:image" content="https://dhruvang-vidhi.firebaseapp.com/images/couple.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="1546232947" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+</head>
+
+<body>
+  <style>
+    *{ font-weight: 700; font-family: 'Open Sans', sans-serif; color: rgb(4, 36, 47); } 
+    *:focus { outline: none; } 
+    body { background: linear-gradient(to bottom, #8c7a7a 0%, #af877c 65%, #af877c 100%) fixed; background: url(../images/background.jpg) no-repeat center center fixed; background-size: cover; font: 14px/20px; font-family: 'Charm', cursive; margin-top: 30px; color: #FBDE79; } 
+    .formBox { display: inline-block; font-size: 0; width: 100%; text-align: center; margin: 15px 0; } 
+    .formBox input { border: none; background-color: transparent; border: 2px solid #FBDE79; padding: 10px;} 
+    .formBox button { background-color: #FBDE79; padding: 10px; border: 2px solid #FBDE79; width: 100px; }
+  </style>
+  <div class="formBox">
+    <input type="text" name="name" id="name">
+    <button id="generate" type="button">Create</button>
+  </div>
+  <div class="formBox">
+    <button class="copy" onclick="copytoclip()">Copy</button>
+    <input type="text" name="link" id="link" readonly>
+  </div>
+
+
+  <script>
+    function copytoclip() {
+      var copyText = document.getElementById("link");
+      copyText.select();
+      document.execCommand("copy");
+    }
+    (function () {
+      document.getElementById("generate").addEventListener("click", function () {
+        document.getElementById("link").value = "https://dhruvang-vidhi.ga/?name=" + btoa(document.getElementById("name").value).replace(/=/g, '');
+      });
+    })();
+  </script>
+</body>
+
+</html>
